@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5B4F85D11D0C35010066ED72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F85D01D0C35010066ED72 /* AppDelegate.swift */; };
-		5B4F85D31D0C35010066ED72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F85D21D0C35010066ED72 /* ViewController.swift */; };
 		5B4F85D61D0C35010066ED72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4F85D41D0C35010066ED72 /* Main.storyboard */; };
 		5B4F85D81D0C35010066ED72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4F85D71D0C35010066ED72 /* Assets.xcassets */; };
 		5B4F85DB1D0C35010066ED72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4F85D91D0C35010066ED72 /* LaunchScreen.storyboard */; };
+		5B4F85E31D0C35350066ED72 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F85E21D0C35350066ED72 /* CourseViewController.swift */; };
+		5B4F85E51D0C3A5B0066ED72 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F85E41D0C3A5B0066ED72 /* Course.swift */; };
+		5B4F85E71D0C710E0066ED72 /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F85E61D0C710E0066ED72 /* CourseStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B4F85CD1D0C35010066ED72 /* iKalender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iKalender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4F85D01D0C35010066ED72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B4F85D21D0C35010066ED72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B4F85D51D0C35010066ED72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B4F85D71D0C35010066ED72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B4F85DA1D0C35010066ED72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B4F85DC1D0C35010066ED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B4F85E21D0C35350066ED72 /* CourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		5B4F85E41D0C3A5B0066ED72 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		5B4F85E61D0C710E0066ED72 /* CourseStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				5B4F85D01D0C35010066ED72 /* AppDelegate.swift */,
-				5B4F85D21D0C35010066ED72 /* ViewController.swift */,
 				5B4F85D41D0C35010066ED72 /* Main.storyboard */,
 				5B4F85D71D0C35010066ED72 /* Assets.xcassets */,
 				5B4F85D91D0C35010066ED72 /* LaunchScreen.storyboard */,
 				5B4F85DC1D0C35010066ED72 /* Info.plist */,
+				5B4F85E21D0C35350066ED72 /* CourseViewController.swift */,
+				5B4F85E41D0C3A5B0066ED72 /* Course.swift */,
+				5B4F85E61D0C710E0066ED72 /* CourseStore.swift */,
 			);
 			path = iKalender;
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B4F85D31D0C35010066ED72 /* ViewController.swift in Sources */,
+				5B4F85E51D0C3A5B0066ED72 /* Course.swift in Sources */,
+				5B4F85E31D0C35350066ED72 /* CourseViewController.swift in Sources */,
+				5B4F85E71D0C710E0066ED72 /* CourseStore.swift in Sources */,
 				5B4F85D11D0C35010066ED72 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
