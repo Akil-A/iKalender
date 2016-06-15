@@ -14,6 +14,7 @@ class CourseViewController: UITableViewController {
     var courseStore: CourseStore!
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(courseStore.allCourses.count)
         return courseStore.allCourses.count
     }
     
@@ -23,8 +24,8 @@ class CourseViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
         let course = courseStore.allCourses[indexPath.row]
         
-        cell.textLabel?.text = course.instructor
-        cell.detailTextLabel?.text = course.date
+        cell.textLabel?.text = String(course.id)
+        cell.detailTextLabel?.text = course.main
         
         return cell
     }

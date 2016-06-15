@@ -14,9 +14,11 @@
 		5B4F85E31D0C35350066ED72 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F85E21D0C35350066ED72 /* CourseViewController.swift */; };
 		5B4F85E51D0C3A5B0066ED72 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F85E41D0C3A5B0066ED72 /* Course.swift */; };
 		5B4F85E71D0C710E0066ED72 /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F85E61D0C710E0066ED72 /* CourseStore.swift */; };
+		6BC8C7F37686941EC9BF7F5A /* Pods_iKalender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D46DD479269F2BAA2C3C55 /* Pods_iKalender.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		261425666F1E666C31CA3B46 /* Pods-iKalender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iKalender.release.xcconfig"; path = "Pods/Target Support Files/Pods-iKalender/Pods-iKalender.release.xcconfig"; sourceTree = "<group>"; };
 		5B4F85CD1D0C35010066ED72 /* iKalender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iKalender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4F85D01D0C35010066ED72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B4F85D51D0C35010066ED72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		5B4F85E21D0C35350066ED72 /* CourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		5B4F85E41D0C3A5B0066ED72 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		5B4F85E61D0C710E0066ED72 /* CourseStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
+		83933081306FACFE14D0F169 /* Pods-iKalender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iKalender.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iKalender/Pods-iKalender.debug.xcconfig"; sourceTree = "<group>"; };
+		90D46DD479269F2BAA2C3C55 /* Pods_iKalender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iKalender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC8C7F37686941EC9BF7F5A /* Pods_iKalender.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		257087ABD04B17889635CB8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90D46DD479269F2BAA2C3C55 /* Pods_iKalender.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43824ED79191DFC5464E2663 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83933081306FACFE14D0F169 /* Pods-iKalender.debug.xcconfig */,
+				261425666F1E666C31CA3B46 /* Pods-iKalender.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5B4F85C41D0C35010066ED72 = {
 			isa = PBXGroup;
 			children = (
 				5B4F85CF1D0C35010066ED72 /* iKalender */,
 				5B4F85CE1D0C35010066ED72 /* Products */,
+				43824ED79191DFC5464E2663 /* Pods */,
+				257087ABD04B17889635CB8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B4F85DF1D0C35010066ED72 /* Build configuration list for PBXNativeTarget "iKalender" */;
 			buildPhases = (
+				74AD23627AB0AF1448CF3073 /* [CP] Check Pods Manifest.lock */,
 				5B4F85C91D0C35010066ED72 /* Sources */,
 				5B4F85CA1D0C35010066ED72 /* Frameworks */,
 				5B4F85CB1D0C35010066ED72 /* Resources */,
+				6A04E281722F096FA8244731 /* [CP] Embed Pods Frameworks */,
+				5461AC731DCCA205FEB91BFE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5461AC731DCCA205FEB91BFE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iKalender/Pods-iKalender-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A04E281722F096FA8244731 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iKalender/Pods-iKalender-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74AD23627AB0AF1448CF3073 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B4F85C91D0C35010066ED72 /* Sources */ = {
@@ -256,6 +331,7 @@
 		};
 		5B4F85E01D0C35010066ED72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83933081306FACFE14D0F169 /* Pods-iKalender.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iKalender/Info.plist;
@@ -267,6 +343,7 @@
 		};
 		5B4F85E11D0C35010066ED72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 261425666F1E666C31CA3B46 /* Pods-iKalender.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iKalender/Info.plist;
@@ -295,6 +372,7 @@
 				5B4F85E11D0C35010066ED72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

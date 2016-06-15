@@ -10,19 +10,13 @@ import Foundation
 import UIKit
 
 class Course: NSObject {
-    var instructor: String
-    let date: String
+    var id: Int
+    let main: String
     
-    init(instructor: String, date: String) {
-        self.instructor = instructor
-        self.date = date
+    init(id: Int, main: String) {
+        self.id = id
+        self.main = main
         
         super.init()
-    }
-    
-    convenience override init() {
-        let instructor: String = "Test"
-        let date: String = "12.01.2003"
-        self.init(instructor: instructor, date: date)
     }
 }

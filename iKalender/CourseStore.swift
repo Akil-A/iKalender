@@ -7,22 +7,66 @@
 //
 
 import Foundation
+import Alamofire
+
 
 class CourseStore {
     
+    
+   
+
     var allCourses = [Course]()
     
-    func createCourse() -> Course {
-        let newCourse = Course();
+    
+
         
-        allCourses.append(newCourse)
+    func createCourse(afterCourseCreated: (Course) -> Void) { //1
+        var id: Int = 9
+        var main: String = ""
+        var newCourse: Course?
+        Alamofire.request(.GET, "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=7392ac5ae434e5076d587c7bdf88ef26")
+            .responseJSON(completionHandler: { response in
+                
+                if let JSON = response.result.value {
+                    // id = JSON["id"] as! Int
+                    //main = JSON["main"] as! String
+                    let dataArray: NSArray = JSON["weather"] as! NSArray
+                    
+                    for item in dataArray { // loop through data items
+                        let obj = item as! NSDictionary
+                        for (key, value) in obj {
+                            if key.isEqual("id"){
+                                id = value as! Int
+                                print(id)
+                            }
+                            if key.isEqual("main"){
+                                main = value as! String
+                                print(main)
+                            }
+                        }
+                    }
+                    
+                }
+                print(id)
+
+                newCourse = Course(id: id, main: main)
+                afterCourseCreated(newCourse!) //2
+            })
+
+
         
-        return newCourse;
     }
     
     init() {
-        for _ in 0..<5 {
-            createCourse()
+
+        createCourse() { (fetchedCourse: Course) in
+            //3
+            //do stuff with fetched course
+            print("3")
+
+            self.allCourses.append(fetchedCourse)
+
         }
     }
 }
+
