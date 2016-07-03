@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 
-class CourseViewController: UITableViewController {
+class CourseViewController: UITableViewController{
     
     var courseStore: CourseStore!
+    var course: Course!
+
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(courseStore.allCourses.count)
@@ -30,14 +32,23 @@ class CourseViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        courseStore.createCourse { (fetchedCourse: Course) in
+            self.courseStore.allCourses.append(fetchedCourse)
+        }
+        tableView.reloadData()
         let statusNarHeight = UIApplication.sharedApplication().statusBarFrame.height
         
         let insets = UIEdgeInsets(top: statusNarHeight, left: 0, bottom: 0, right: 0)
         
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
+        tableView.reloadData()
+
     }
 }

@@ -12,13 +12,9 @@ import Alamofire
 
 class CourseStore {
     
-    
-   
 
     var allCourses = [Course]()
     
-    
-
         
     func createCourse(afterCourseCreated: (Course) -> Void) { //1
         var id: Int = 9
@@ -37,36 +33,19 @@ class CourseStore {
                         for (key, value) in obj {
                             if key.isEqual("id"){
                                 id = value as! Int
-                                print(id)
                             }
                             if key.isEqual("main"){
                                 main = value as! String
-                                print(main)
                             }
                         }
                     }
                     
                 }
-                print(id)
 
                 newCourse = Course(id: id, main: main)
-                afterCourseCreated(newCourse!) //2
+                afterCourseCreated(newCourse!) //2                
+
             })
-
-
-        
-    }
-    
-    init() {
-
-        createCourse() { (fetchedCourse: Course) in
-            //3
-            //do stuff with fetched course
-            print("3")
-
-            self.allCourses.append(fetchedCourse)
-
-        }
     }
 }
 
