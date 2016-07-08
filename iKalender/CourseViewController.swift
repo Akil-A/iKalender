@@ -40,6 +40,7 @@ class CourseViewController: UITableViewController{
         
         courseStore.createCourse { (fetchedCourse: Course) in
             self.courseStore.allCourses.append(fetchedCourse)
+            self.tableView.reloadData()
         }
         tableView.reloadData()
         let statusNarHeight = UIApplication.sharedApplication().statusBarFrame.height
@@ -50,5 +51,16 @@ class CourseViewController: UITableViewController{
         tableView.scrollIndicatorInsets = insets
         tableView.reloadData()
 
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowCourse" {
+            if let row = tableView.indexPathForSelectedRow?.row {
+                
+                let course = courseStore.allCourses[row]
+                let detailViewController = segue.destinationViewController as! DetailViewController
+                detailViewController.course = course
+            }
+        }
     }
 }

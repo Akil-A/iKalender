@@ -15,6 +15,7 @@
 		5B4F85E51D0C3A5B0066ED72 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F85E41D0C3A5B0066ED72 /* Course.swift */; };
 		5B4F85E71D0C710E0066ED72 /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F85E61D0C710E0066ED72 /* CourseStore.swift */; };
 		6BC8C7F37686941EC9BF7F5A /* Pods_iKalender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D46DD479269F2BAA2C3C55 /* Pods_iKalender.framework */; };
+		EFF8B0A61D2FFADD00FE159B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8B0A51D2FFADD00FE159B /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5B4F85E61D0C710E0066ED72 /* CourseStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
 		83933081306FACFE14D0F169 /* Pods-iKalender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iKalender.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iKalender/Pods-iKalender.debug.xcconfig"; sourceTree = "<group>"; };
 		90D46DD479269F2BAA2C3C55 /* Pods_iKalender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iKalender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFF8B0A51D2FFADD00FE159B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				5B4F85E21D0C35350066ED72 /* CourseViewController.swift */,
 				5B4F85E41D0C3A5B0066ED72 /* Course.swift */,
 				5B4F85E61D0C710E0066ED72 /* CourseStore.swift */,
+				EFF8B0A51D2FFADD00FE159B /* DetailViewController.swift */,
 			);
 			path = iKalender;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			files = (
 				5B4F85E51D0C3A5B0066ED72 /* Course.swift in Sources */,
 				5B4F85E31D0C35350066ED72 /* CourseViewController.swift in Sources */,
+				EFF8B0A61D2FFADD00FE159B /* DetailViewController.swift in Sources */,
 				5B4F85E71D0C710E0066ED72 /* CourseStore.swift in Sources */,
 				5B4F85D11D0C35010066ED72 /* AppDelegate.swift in Sources */,
 			);
