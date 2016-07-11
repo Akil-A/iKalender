@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let courseStore = CourseStore()
         
-        let courseController = window!.rootViewController as! CourseViewController
-        
+         let navController = window!.rootViewController as! UINavigationController
+        let courseController = navController.topViewController as! CourseViewController
         courseController.courseStore = courseStore
         
         return true

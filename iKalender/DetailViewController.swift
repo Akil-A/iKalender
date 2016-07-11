@@ -18,8 +18,11 @@ class DetailViewController : UIViewController {
     @IBOutlet var dateField: UITextView!
     @IBOutlet var avaiblePlace: UITextField!
     
-    var course: Course!
-    
+    var course: Course! {
+        didSet {
+            navigationItem.title = course.main
+        }
+    }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         

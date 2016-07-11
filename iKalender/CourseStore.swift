@@ -16,7 +16,7 @@ class CourseStore {
     var allCourses = [Course]()
     
         
-    func createCourse(afterCourseCreated: (Course) -> Void) { //1
+    func createCourse(afterCourseCreated: (Course) -> Void) {
         var id: Int = 9
         var main: String = ""
         var newCourse: Course?
@@ -43,7 +43,7 @@ class CourseStore {
                 }
 
                 newCourse = Course(id: id, main: main)
-                afterCourseCreated(newCourse!) //2                
+                afterCourseCreated(newCourse!)                
 
             })
     }

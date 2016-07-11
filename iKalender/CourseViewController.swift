@@ -14,20 +14,50 @@ class CourseViewController: UITableViewController{
     var courseStore: CourseStore!
     var course: Course!
 
+    @IBOutlet weak var mySegmentedControl: UISegmentedControl!
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(courseStore.allCourses.count)
-        return courseStore.allCourses.count
+        
+        var returnValue = 0
+        
+        switch(mySegmentedControl.selectedSegmentIndex)
+        {
+            
+        case 0:
+            returnValue = courseStore.allCourses.count
+            break
+        case 1:
+            break
+            
+        default:
+            break
+            
+        }
+        return returnValue
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
         let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
-        let course = courseStore.allCourses[indexPath.row]
         
-        cell.textLabel?.text = String(course.id)
-        cell.detailTextLabel?.text = course.main
+        switch(mySegmentedControl.selectedSegmentIndex)
+        {
+            
+        case 0:
+            let course = courseStore.allCourses[indexPath.row]
+            cell.textLabel?.text = String(course.id)
+            cell.detailTextLabel?.text = course.main
+            break
+        case 1:
+            break
+            
+        default:
+            break
+            
+        }
+        
         
         return cell
     }
@@ -43,16 +73,11 @@ class CourseViewController: UITableViewController{
             self.tableView.reloadData()
         }
         tableView.reloadData()
-        let statusNarHeight = UIApplication.sharedApplication().statusBarFrame.height
-        
-        let insets = UIEdgeInsets(top: statusNarHeight, left: 0, bottom: 0, right: 0)
-        
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
-        tableView.reloadData()
-
     }
     
+    @IBAction func segmentedControlActionChanged(sender: AnyObject) {
+        tableView.reloadData()
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowCourse" {
             if let row = tableView.indexPathForSelectedRow?.row {
